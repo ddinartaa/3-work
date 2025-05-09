@@ -1,0 +1,121 @@
+.experiments {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+
+.experiments__screen {
+  flex: 3;
+  border-radius: 20px;
+  box-shadow: -10px 10px 50px rgb(210, 207, 207);
+  overflow: hidden;
+}
+
+.experiments__screen-head {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  background-color: #F4F5F9;
+}
+
+.cirles {
+  display: flex;
+  margin-right: 20px;
+}
+
+.cirles__c_red {
+  background-color: #F96056;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.cirles__c_yellow {
+  background-color: #FDBD45;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.cirles__c_green {
+  background-color: #53E546;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.experiments__block-photo {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+  padding: 40px 20px;
+}
+
+.experiments__photo_wide {
+  grid-column: span 2;
+}
+
+.experiments__photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.experiments__text {
+  flex: 2;
+  margin-left: 50px;
+}
+
+.experiments__count {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .experiments {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .experiments__text {
+    margin: 0;
+  }
+  .experiments__count {
+    width: 400px;
+  }
+}
+@media (max-width: 1000px) {
+  .experiments {
+    margin-top: 60px;
+  }
+  .experiments__block-photo {
+    gap: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .experiments__count {
+    flex-direction: column;
+    width: 100%;
+  }
+  .experiments__count h3, .experiments__count p {
+    margin: 0;
+  }
+  .experiments__block-photo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 45px 30px;
+  }
+}
+@media (max-width: 480px) {
+  .experiments__count {
+    text-align: left;
+    gap: 15px;
+  }
+  .experiments__block-photo {
+    padding: 30px 20px;
+  }
+}/*# sourceMappingURL=experiments.css.map */

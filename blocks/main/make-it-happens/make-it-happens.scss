@@ -1,0 +1,48 @@
+@use '../../../variables/colors.scss' as *;
+
+.make-it-happens {
+    display: flex;
+    justify-content: center;
+}
+
+.make-it-happens__block {
+    margin-top: 120px;
+    display: flex;
+}
+
+.make-it-happens__img {
+    width: auto;
+    margin: 0 30px;
+}
+
+.make-it-happens__text {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 30px;
+}
+
+.make-it-happens__p {
+    color: $violet-color;
+}
+
+@media (max-width: 750px) {
+    .make-it-happens__block {
+        flex-direction: column-reverse;
+    }
+    .make-it-happens__text {
+        width: auto;
+        margin: 0;
+    }
+    .make-it-happens__p {
+        margin: 0;
+    }
+    .make-it-happens__img {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .make-it-happens__block {
+        margin-top: 65px;
+    }
+}

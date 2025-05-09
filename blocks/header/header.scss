@@ -1,0 +1,94 @@
+@use '../../variables/colors.scss' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header__logo {
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    width: 100%;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.header__link {
+    color: $blue-color;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+
+/* Стили для иконки бургера (по умолчанию скрыта) */
+.header__burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+  
+.header__burger-line {
+    width: 35px;
+    height: 3px;
+    background-color: $blue-color;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+
+/* Медиа-запрос для экранов до 900px */
+@media (max-width: 900px) {
+/* Скрываем навигацию по умолчанию */
+    .header__nav {
+        display: none;
+    }
+    
+    .header__nav_show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+    .header__link{
+      padding: 10px;
+      margin: 0;
+    }
+    .header__link:hover {
+      background-color: $light-color;
+    }
+
+    /* Показываем бургер-иконку */
+    .header__burger {
+      display: flex;
+    }
+    
+    /* Если меню активно, показываем его */
+    .header__burger_clicked {
+      display: flex;
+    }
+    .header__burger_clicked .header__burger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .header__burger_clicked .header__burger-line:nth-child(2) {
+      display: none;
+    }
+    .header__burger_clicked .header__burger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+
+

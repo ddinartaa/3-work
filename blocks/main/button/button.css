@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  background-color: #3F41A6;
+  width: 250px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  cursor: pointer;
+}
+.button a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .button {
+    width: 170px;
+    height: 50px;
+  }
+  .button a {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=button.css.map */

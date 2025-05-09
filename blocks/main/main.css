@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Poppins";
+  margin: 40px 100px;
+  color: #1A093C;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+  body {
+    margin: 35px 80px;
+  }
+}
+@media (max-width: 610px) {
+  body {
+    margin: 25px 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 380px) {
+  h2 {
+    font-size: 25px;
+  }
+  body {
+    margin: 25px 35px;
+  }
+}/*# sourceMappingURL=main.css.map */
